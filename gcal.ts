@@ -42,7 +42,7 @@ export class GoogleCalendarClient {
       );
       
       const parsed = await calendarResponse.json();
-      console.log(parsed);
+      console.log(calendarResponse);
       
       return parsed;
     } catch (e) {
