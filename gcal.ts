@@ -38,9 +38,8 @@ export class GoogleCalendarClient {
       console.log('Request URL:', url); // Debug: Log the full URL
       const calendarResponse = await fetch(url, { headers: { Referer: "discord-events-sync" } },
       );
-      console.log('Response:', calendarResponse); // Debug: Log response status
       const parsed = await calendarResponse.json();
-      
+      console.log('parsed:', parsed); // Debug: Log response status
       return parsed;
     } catch (e) {
       console.error(
