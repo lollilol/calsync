@@ -40,6 +40,7 @@ export class GoogleCalendarClient {
         }`,
         { headers: { Referer: "discord-events-sync" } },
       );
+      console.log('Response status:', calendarResponse.status); // Debug: Log response status
       const parsed = await calendarResponse.json();
       
       return parsed;
