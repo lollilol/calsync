@@ -15,7 +15,6 @@ import { DiscordClient } from "./discord.ts";
 import { loadEnvConfig } from "./envConfig.ts";
 import { GoogleCalendarClient } from "./gcal.ts";
 
-const TWO_WEEKS = 1000 * 3600 * 24 * 7 * 2;
 const ONE_YEAR = 1000 * 3600 * 24 * 365;
 
 const envConfig = loadEnvConfig();
