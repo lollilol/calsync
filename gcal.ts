@@ -42,7 +42,7 @@ export class GoogleCalendarClient {
       );
       
       const parsed = await calendarResponse.json();
-      console.log("penis=" + parsed);
+      console.log(parsed);
       
       return parsed;
     } catch (e) {
