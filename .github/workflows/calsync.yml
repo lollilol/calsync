@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     name: 🔁 Sync Events
     steps:
-      - name: penis
-        run: set
       - uses: acm-uic/calsync@main
         with:
           discord-guild-id: ${{ secrets.DISCORD_GUILD_ID }}
