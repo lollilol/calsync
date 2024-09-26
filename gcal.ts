@@ -34,11 +34,9 @@ export class GoogleCalendarClient {
         orderBy,
         key: this.#apiKey,
       };
-      const calendarResponse = await fetch(
-        `${API_BASE_URL}/calendars/${this.#calendarId}/events?${
-          (new URLSearchParams(calendarRequestParams)).toString()
-        }`,
-        { headers: { Referer: "discord-events-sync" } },
+      const url = `${API_BASE_URL}/calendars/${this.#calendarId}/events?${new URLSearchParams(calendarRequestParams).toString()}`;
+      console.log('Request URL:', url); // Debug: Log the full URL
+      const calendarResponse = await fetch(url, { headers: { Referer: "discord-events-sync" } },
       );
       console.log('Response status:', calendarResponse.status); // Debug: Log response status
       const parsed = await calendarResponse.json();
