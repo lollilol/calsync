@@ -40,8 +40,10 @@ export class GoogleCalendarClient {
         }`,
         { headers: { Referer: "discord-events-sync" } },
       );
+      
       const parsed = await calendarResponse.json();
-
+      console.log("penis="+parsed);
+      
       return parsed;
     } catch (e) {
       console.error(
